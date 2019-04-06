@@ -1,0 +1,39 @@
+{{ partial "head.html" . }}
+
+        <div class="flex-wrapper">
+            <div class="video-div">
+                <video id="weddingVideo" playsinline="playsinline" controls>
+                    <source src="/images/wedding-website.mp4" type="video/mp4">
+                </video>
+                <!--<img id="img-test" src="video-still.png">-->
+            </div>
+            <!--<img src="placeholder-gif.gif" width="100%">-->
+
+            <div class="row">
+                <a onmouseover="changeTextColour('when')" onmouseout="revertTextColour('when')" href="/when"><div class="col-3 col-3a max-height-300">
+                        <img src="/images/clock.png"><h2 id="when">WHEN</h2></div></a><a onmouseover="changeTextColour('where')" onmouseout="revertTextColour('where')" href="/where"><div class="col-3 col-3b max-height-300">
+                    <img src="/images/compass.png"><h2 id="where">WHERE</h2></div></a><a onmouseover="changeTextColour('info')" onmouseout="revertTextColour('info')"href="/info"><div class="col-3 col-3c max-height-300">
+                    <img src="/images/info.png"><h2 id="info">INFO</h2></div></a>
+            </div>
+            <div class="row">
+                <a class="button" href="/rsvp">RSVP</a>
+            </div>
+        </div>
+        <script>
+            function changeTextColour(x) {
+                document.getElementById(x).style.color = "white";
+            }
+            
+            function revertTextColour(x) {
+                document.getElementById(x).style.color = "#0F6B6B";
+            }
+            
+            document.getElementById("weddingVideo").addEventListener('ended', function() { 
+                this.currentTime = 91;
+                this.play();
+                this.pause();
+            }, false);
+            
+        </script>
+    </body>        
+</html>

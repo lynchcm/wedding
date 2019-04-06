@@ -1,0 +1,39 @@
+{{ partial "head.html" . }}
+
+        <a href="/">
+            <div id="banner">
+                <img src="/images/compass.png" width="100px"><span id="banner-chranna">RO &amp; CHRIS</span><h1>WHERE</h1>
+            </div>
+        </a>
+        <h2 id="address">The Conservatory<br>The Pavilion Gardens<br>St John's Rd<br>Buxton<br>SK17 6BE</h2>
+        <p class="where-p">The ceremony is in the winter garden conservatory. It can be accessed either from Water Street right by the opera house or through the Pavilion Gardens car park on Burlington road.</p>
+        <p class="where-p">See the <a href="/info">info page</a> for more details on how to get there.</p>
+        <div id="googleMapAPI"></div>
+        <div class="spacer"></div>
+        
+        <script>
+            function myMap() {
+                var Buxton = new google.maps.LatLng(53.258201, -1.917156);
+                var point1 = new google.maps.LatLng(53.257707, -1.920963);
+                var point2 = new google.maps.LatLng(53.257852, -1.919885);
+                var point3 = new google.maps.LatLng(53.257207, -1.919584);
+                var point4 = new google.maps.LatLng(53.257046, -1.920725);
+                
+                var mapCanvas = document.getElementById("googleMapAPI")
+                var mapOptions = {center: Buxton, zoom:16};
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+                
+                var marker = new google.maps.Marker({position:Buxton, icon:"rings.png"});
+                marker.setMap(map);
+                var flightPath = new google.maps.Polyline({
+                    path: [point1, point2, point3, point4, point1],
+                    strokeColor: "red",
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2
+                });
+                flightPath.setMap(map);
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk3Q-Y1G-3iO0LNYyBDwJWnGiEe8leYsU&callback=myMap"></script>
+    </body>
+</html>

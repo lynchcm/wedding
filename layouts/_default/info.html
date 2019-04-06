@@ -1,0 +1,84 @@
+{{ partial "head.html" . }}
+
+        <a href="/">
+            <div id="banner">
+                <img src="/images/info.png" width="100px"><span id="banner-chranna">RO &amp; CHRIS</span><h1>INFO</h1>
+            </div>
+        </a>
+        <div class="row-flex light-green-background" id="full-width">
+            <div class="col-2 col-2a">
+                <h2>DRESS CODE</h2>
+                <p>Smart(ish). There's limited seating for the ceremony and there will be a lot of dancing later so wear comfy&nbsp;shoes!</p>
+            </div><div class="col-2 col-2b">
+                <h2>RSVP</h2>
+                <p>Please RSVP by March 31st 2019 at the latest, but feel free to reply&nbsp;sooner!</p>
+            <a class="button" href="/rsvp">RSVP</a>
+            </div>
+        </div>
+        <div class="video-div">
+            <video id="giftVideo" playsinline="playsinline" controls>
+                <source src="/images/no-gifts.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="getting-there-section">
+            <h2 class="left-align">ACCOMMODATION</h2>
+            <p>There are lots of hotels and B&amp;B's within walking distance of the venue. These tend to book up very quickly so please book early!</p>
+            <h2 class="left-align">GETTING THERE</h2>
+            <h3>By Car</h3>
+            <p>Use postcode SK17 9AR or put ‘pavilion gardens car park’ in to google maps. There is a 270-space pay-and-display car park on the corner of St John's Road and Burlington Road; 2&ndash;4 hours costs £3.40, over 4 hours is £5.20. Parking charges apply 8am to 6pm even on Sunday, so if you leave your car overnight you'll need to move it by 8am. If you plan to drive and would be willing to lift share, let us know!</p>
+            <h3>By Train</h3>
+            <p>The winter garden conservatory is a six-minute walk from Buxton train station. From London Euston, it’s just over three hours with one change at Stockport, and tickets cost around £50.</p>
+            <h3>By Plane</h3>
+            <p>Manchester is the nearest airport. A return train ticket from Manchester airport costs £25&ndash;30 if you <a href="https://www.thetrainline.com/">book in advance</a>, but there's also the <a href="http://www.highpeakbuses.com/skyline%20199">Skyline 199</a> coach which costs £5.50 each way (no need to book in advance).</p>
+        </div>
+        <div id="grey-background">
+            <table id="airports">
+                <tr>
+                    <td>AIRPORT</td>
+                    <td>DRIVING</td>
+                    <td id="train-width">TRAIN/COACH</td>
+                </tr>
+                <tr>
+                    <td>Manchester</td>
+                    <td>1 hr</td>
+                    <td>1.5&ndash;2 hrs</td>
+                </tr>
+                <tr>
+                    <td>Luton</td>
+                    <td>3&ndash;4 hrs</td>
+                    <td>4&ndash;4.5 hrs</td>
+                </tr>
+                <tr>
+                    <td>Stansted</td>
+                    <td>3.5&ndash;4.5 hrs</td>
+                    <td>4&ndash;4.5 hrs</td>
+                </tr>
+                <tr>
+                    <td>London City</td>
+                    <td>3.5&ndash;5 hrs</td>
+                    <td>3.5&ndash;4 hrs</td>
+                </tr>
+                <tr>
+                    <td>Gatwick</td>
+                    <td>4h 15&ndash;6 hrs</td>
+                    <td>3h45&ndash;4 hrs</td>
+                </tr>
+                <tr>
+                    <td>Heathrow</td>
+                    <td>3.5&ndash;5 hrs</td>
+                    <td>4&ndash;4.5 hrs</td>
+                </tr>
+            </table>
+        </div>
+        <div class="spacer"></div>
+        <script>
+            document.getElementById("giftVideo").addEventListener('ended', function() { 
+                this.currentTime = 61;
+                this.play();
+                this.pause();
+            }, false);
+        
+        
+        </script>
+    </body>
+</html>
